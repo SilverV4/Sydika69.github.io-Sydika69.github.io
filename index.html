@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body 
+        {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        }
+        header
+        {
+            letter-spacing: 6px;
+            background: royalblue;
+            padding: 20px;
+            color: white;
+        }
+        h2
+        {
+            font-size: 2em;
+            width: 100%;
+        }
+        section
+        {
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        .container
+        {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card
+        {
+            border: 1px solid yellow;
+            background-color: rgb(236, 10, 161);
+            margin: 25px;
+            padding: 25px;
+            box-shadow: 6px 6px 6px rgb(255, 3, 3);
+        }
+        @media screen and (min-width: 50em;) {
+            .card
+            {
+                flex-basis: 325px;
+            }
+            header h1
+            {
+                font-size: 5em;
+            }
+        }
+        .icons
+        {
+            font-size: 8em;
+            padding: 25px;
+        }
+        .button, .container
+        {
+            margin: 10px;
+        }
+        .button, .button
+        {
+            background: royalblue;
+            border: 0;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .blue
+        {
+            background: royalblue;
+        }
+        td
+        {
+            padding: 10px;
+        }
+        table{
+            margin: auto;
+        }
+        #my-order
+        {
+            background-color: #29c1c4;
+            padding: 25px;
+            display: none;
+        }
+        .footer
+        {
+            padding: 30px;
+            background: royalblue;
+        }
+        .team_container
+        {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 25px;
+            background-color: rebeccapurple;
+        }
+        .table_survey
+        {
+            background-color: goldenrod;
+            padding: 25px;
+        }
+        .vision
+        {
+            align-content: center;
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>
+        Bobrik industries Ltd.
+    </h1>
+    <h4>
+        Shipping you monkey since '93
+    </h4>
+</header>
+<section class="vision">
+    <h2>
+        WELCOME
+    </h2>
+    <p>
+       Vison: We are here to provide our buyers with satisfactory monkeys to do your business.
+       <br>
+       <br>
+       <img src="images\monkeycall.jfif">
+    </p>
+    <br>
+    <br>
+    <p>
+        ABOUT US: Founded in 1993, by Bobrik Dobrik.
+        He set himself a mission to provide every rich idiot on this planet with a Monkey servant that will do all his work.
+        <br>
+        <img src="images\monkeyinsuit.jpg">
+    </p>
+</section>
+<section class="container" style="background-color: royalblue;">
+<h2>
+    FOUNDERS
+</h2>
+    <article class="card"> 
+    <div class="icons"> <img src="D:\11DTC\images\Bobrik.jpg" width="325" height="216.5"> </div>
+    <h3>Bobrik Dobrik</h3>
+    <p>Snr. Web developer - created entire website selling his fellow Monkeys to customers</p>
+    <button> Contact </button>
+</article>
+<article class="card">
+    <div class="icons"> <img src="images/Monkey.jpg" alt="monkey" width="250" height="375">
+    </div>
+    <h3>Bobby teh Monkey</h3>
+    <p>After a 5 year rival with Bobrik, Bobby has reunited with Bobby to be co-founder of Bobrik industries Ltd.</p>
+    <button>Contact</button>
+</article>
+</section>
+<section class="team_container">
+    <h2>
+        Our Team
+    </h2>
+        <article class="card"> 
+        <div class="icons"> <img src="images\akchimp.gif"> </div>
+        <h3>Mustafa</h3>
+        <p>The one who created the B.I.U (Bobrik industries universe) he has now been given a role as an intern at Bobrik industries building and is learning year 11 computing</p>
+    </article>
+    <article class="card">
+        <div class="icons"> <img src="images\monkeygotdrip.gif">
+        </div>
+        <h3>Tawana</h3>
+        <p>Secretary to Bobby teh Monkey, Tawana has spent his life in the wilderness of Sangoma hunting the enemies of the Nguru tribe</p>
+    </article>
+    </section>
+<section>
+    <h2> Order a Monkey: </h2>
+    <form id="my-form">
+    <table class="table_survey">
+        <tr>
+            <td> Name: </td>
+            <td> <input tpye="text" size="25" name="my-name"> </td>
+        </tr>
+
+        <tr>
+            <td> Address: </td>
+            <td> <input type="text" size="25" name="my-address"> </td>
+        </tr>
+
+        <tr>
+            <td> What monkey you would like: </td>
+            <td> 
+                <select name="my-monkey">
+                    <option> Cleaning </option>
+                    <option> Cooking </option>
+                    <option> Driving </option>
+                    <option> Body Guard </option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td> Quantity (Max 5): </td>
+            <td> 
+                <input type="number" name="my-qty" value="1" min="1" max="5">
+            </td>
+        </tr>
+        <tr>
+            <br>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input class="button" type="button" value="process order"
+                onclick="process order();">
+                <input class="button" type="reset" value="Clear"
+                onclick="document.getElementById('my-order').style.display = 'none'"; >
+            </td>
+        </tr>
+    </table>
+    <br>
+    <div id="my-order">
+
+    </div>
+    </form> 
+</section>
+<section class="blue container"></section>
+<div class="footer">
+    <h3>Thanks for visiting</h3>
+    <div class="container">
+        <article class="card">
+            <h3>Get in touch</h3>
+            <p>Best monkeys in the world
+                <br>
+                <img src="images\monkeyAfro.jfif">
+            </p>
+        </article>
+        <article class="card">
+            <h3>Contact us</h3>
+            <p>We would love to hear from you
+                <br>Call us or Email us. <br>
+                Mobile: 02040938220
+                <br>
+                Email: 19174@gdc.school.nz
+                <br>
+                <img src="images\Monkey on phone.gif">
+            </p>
+        </article>
+        &copy;
+    </div>
+</div>
+<script>
+    function placeorder ()
+    {
+            var orderform = document.getElementById("myform");
+            results = "<h3> successful!</h3> Here is your order.";
+            results += "<br>Name:" + orderform.elements["my-name"].value;
+            results += "<br>Adderess:" + orderform.elements["my-address"].value;
+            results += "<br>I like to order:" + orderform.elements["my-monkey"].value;
+            results += "<br>Quantity:" + orderform.elements["my-qty"].value;
+            var orderresults = document.getElementById("my-order");
+            orderresults.style.display = "block";
+            orderresults.innerHTML = results;
+    }
+</script>
+</body>
+</html>
